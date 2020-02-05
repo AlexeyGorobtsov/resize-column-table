@@ -2,3 +2,11 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+*{box-sizing: border-box;}
+table{
+  border-collapse:collapse;
+  width: 100%;
+}
+td,th{padding:5px 15px;text-align:left;}
+table,th,td{border:1px solid #000;}
