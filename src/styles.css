@@ -7,6 +7,27 @@
 table{
   border-collapse:collapse;
   width: 100%;
+
 }
 td,th{padding:5px 15px;text-align:left;}
-table,th,td{border:1px solid #000;}
+table,th,td{
+  border:transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+th .drag-handle:after {
+  content: "⋮";
+  height: 10px;
+  left: 3px;
+  position: absolute;
+  display: block;
+  top: 0;
+  color: #0085ff;
+}
+td {
+  max-width: 40px;
+}
+.drag-handle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
