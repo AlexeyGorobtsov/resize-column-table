@@ -1,10 +1,14 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useState, useCallback} from 'react';
 import {useResizeColumn} from './ResizeColumn';
 
 export const Table = props => {
-    const tableRef = useRef(null);
-    useResizeColumn(tableRef);
-
+    const [node, setNode] = useState(null);
+    const tableRef = useCallback(node => {
+        if (node !== null) {
+            setNode(node);
+        }
+    }, []);
+    useResizeColumn(node);
     return (
         <div className="App">
             <table ref={tableRef} id={'tableId'}>

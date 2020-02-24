@@ -1,16 +1,16 @@
 import React, {useEffect} from "react";
 
-export function useResizeColumn(tableEl) {
+export function useResizeColumn(node) {
     const listeners = [];
     useEffect(() => {
-        resizableGrid(tableEl.current);
+        node && resizableGrid(node);
 
         return () => {
              listeners.forEach(item => {
                 item.node.removeEventListener(item.event, item.handle)
             })
         }
-    }, [tableEl]);
+    }, [node]);
 
     function resizableGrid(table) {
         const arrayRow = Array.from(table.querySelectorAll('tr'));
