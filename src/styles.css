@@ -31,3 +31,8 @@ td {
 .drag-handle:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+.select-input {
+  width: 100%;
+  max-width: 200px;
+}

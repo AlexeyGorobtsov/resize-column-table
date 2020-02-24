@@ -17,6 +17,12 @@ export const Table = props => {
                     <th>File</th>
                     <th>File</th>
                 </tr>
+                <tr>
+                    <th><input type="text" className={'select-input'}/></th>
+                    <th><input type="text" className={'select-input'}/></th>
+                    <th><input type="text" className={'select-input'}/></th>
+                    <th><input type="text" className={'select-input'}/></th>
+                </tr>
                 </thead>
                 <tbody>
                 <tr>

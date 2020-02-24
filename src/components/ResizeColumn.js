@@ -42,7 +42,6 @@ export function useResizeColumn(tableEl) {
                 curColWidth = curCol.offsetWidth - padding;
                 if(nxtCol) {
                     nxtColWidth = nxtCol.offsetWidth - padding;
-                    console.log({nxtColWidth})
                 }
             };
 
@@ -109,5 +108,7 @@ export function useResizeColumn(tableEl) {
 
             return (window.getComputedStyle(el, null).getPropertyValue(css))
         }
+
+        return {isResize: true};
     }
 }
